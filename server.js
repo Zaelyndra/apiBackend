@@ -1,5 +1,6 @@
 const express = require('express')
 const apiRouter = require('./apiRouter').router
+let bodyParser = require('body-parser')
 
 
 
@@ -8,8 +9,8 @@ const port = 9000
 
 
 //Body Parser configuration
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.get('/',  (req, res)=> {
     res.setHeader('Content-Type', 'text/html');

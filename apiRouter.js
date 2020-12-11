@@ -13,7 +13,7 @@ exports.router = (function () {
     apiRouter.route('/citations/user/:id').get(citationCtrl.getCitationsUser)
 
     //POST
-    apiRouter.route('/create_citation/:id').post(citationCtrl.createCitation)
+    apiRouter.route('/create_citation/').post(citationCtrl.createCitation)
     apiRouter.route('/register/').post(userCtrl.register)
 
     //PUT

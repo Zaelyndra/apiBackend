@@ -43,7 +43,6 @@ module.exports = {
 
 
     createCitation: function (req, res) {
-
         // Params
         let idUTILISATEURS = req.body.idUTILISATEURS;
         let titre = req.body.titre;
