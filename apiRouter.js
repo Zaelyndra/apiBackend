@@ -1,6 +1,7 @@
 //Imports
 const express = require('express');
 const  citationCtrl = require('./routes/citationsCtrll');
+const userCtrl = require('./routes/userCtrl')
 
 // Initialisation du router
 exports.router = (function () {
@@ -13,7 +14,7 @@ exports.router = (function () {
 
     //POST
     apiRouter.route('/create_citation/:id').post(citationCtrl.createCitation)
-
+    apiRouter.route('/register/').post(userCtrl.register)
 
     //PUT
     apiRouter.route('/modify_citation/:id').put(citationCtrl.updateCitation)
